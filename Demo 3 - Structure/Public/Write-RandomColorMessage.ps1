@@ -10,7 +10,7 @@ function Write-RandomColorMessage {
     # Get the random color and create a string with an ANSI color escape sequence
     # The string will be interpreted as color by the console 
     $RandomColor = Get-RandomColor -Hex
-	$AnsiString = $PSStyle.Foreground.FromRgb($RandomColor)
+    $AnsiString = $PSStyle.Foreground.FromRgb($RandomColor)
 
     # Write the message to the console and reset the color afterwards
     Write-Output ($AnsiString + $Message + $PSStyle.Reset)
